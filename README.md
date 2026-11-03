@@ -1,48 +1,48 @@
-# asistencia-frontend
+# Asistencia Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+Interfaz web del sistema de asistencia de empleados. Permite registrarse, iniciar sesión y acceder a las vistas protegidas consumiendo la API de [Asistencia-backend](https://github.com/FortunaEdgar/Asistencia-backend).
 
-## Recommended IDE Setup
+## Funcionalidades
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Inicio de sesión y registro con validación de formularios
+- Sesión basada en cookies, con cierre de sesión
+- Guardias de ruta para páginas privadas y de invitados
+- Errores de la API mostrados en cada campo del formulario
 
-## Recommended Browser Setup
+## Tecnologías
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+Vue 3, TypeScript, Vite, Pinia, Vue Router, VeeValidate y Zod.
 
-## Type Support for `.vue` Imports in TS
+## Requisitos
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- Node.js `^22.18.0` o `>=24.12.0`
+- pnpm
+- El backend en ejecución
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Instalación
 
 ```sh
 pnpm install
 ```
 
-### Compile and Hot-Reload for Development
+Define la URL del backend en el archivo `.env`:
+
+```env
+VITE_BACKEND_URL=<url-del-backend>/api
+```
+
+Inicia el servidor de desarrollo:
 
 ```sh
 pnpm dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## Scripts
 
-```sh
-pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+| Comando        | Descripción                                 |
+| -------------- | ------------------------------------------- |
+| `pnpm dev`     | Servidor de desarrollo                      |
+| `pnpm build`   | Comprobación de tipos y build de producción |
+| `pnpm preview` | Vista previa del build                      |
+| `pnpm lint`    | Análisis con Oxlint y ESLint                |
+| `pnpm format`  | Formateo con Prettier                       |
