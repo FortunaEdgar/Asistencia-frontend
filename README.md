@@ -28,7 +28,7 @@ pnpm install
 Define la URL del backend en el archivo `.env`:
 
 ```env
-VITE_BACKEND_URL=<url-del-backend>
+VITE_BACKEND_URL=<url-del-backend>/api
 ```
 
 Inicia el servidor de desarrollo:
